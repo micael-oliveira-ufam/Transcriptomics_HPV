@@ -62,21 +62,11 @@ write.csv(pan, "results/tables/TableS13_panel_gene_promoter_DMPs.csv", row.names
 log_num("dmp_panel_promoter_sig", nrow(pan)); log_num("dmp_panel_promoter_genes", paste(sort(unique(unlist(strsplit(pan$gene, ";")))[unique(unlist(strsplit(pan$gene, ";"))) %in% PANEL$gene]), collapse = ","))
 print(pan, digits = 3)
 
-# ---- Figure 9: (A) volcano, (B) CpG-island context ------------------------------------
-cols_m <- c(Hypermethylated = "#b2182b", Hypomethylated = "#2166ac", `Not significant` = "#b0b0b0"); dmp$status <- factor(dmp$status, levels = names(cols_m))
-pA <- ggplot(dmp, aes(logFC, -log10(adj.P.Val), colour = status)) + geom_point(size = 0.25, alpha = 0.5, stroke = 0) +
-  geom_vline(xintercept = c(-1, 1), linetype = "dashed", colour = "grey40", linewidth = 0.3) + geom_hline(yintercept = -log10(0.05), linetype = "dashed", colour = "grey40", linewidth = 0.3) +
-  scale_colour_manual(values = cols_m, name = NULL, labels = function(x) paste0(sub("^Hyper.*", "Hyper", sub("^Hypo.*", "Hypo", sub("^Not.*", "NS", x))), " (n = ", format(table(dmp$status)[x], big.mark = ",", trim = TRUE), ")")) +
-  labs(x = "M-value difference (tumour - normal)", y = expression(-log[10]~"adjusted p")) + guides(colour = guide_legend(override.aes = list(size = 2, alpha = 1), nrow = 1)) +
-  theme_classic(base_size = 9) + theme(legend.position = "bottom")
+# ---- Figure 9: (A) volcano with gene labels, (B) CpG-island context: tables below, drawing in cell 11b
 ctx <- function(x) factor(ifelse(x == "" | is.na(x), "Open sea", sub("^N_|^S_", "", x)), levels = c("Island", "Shore", "Shelf", "Open sea"))
 isl <- dmp |> dplyr::mutate(ctx = ctx(island_relation)); a1 <- isl |> dplyr::filter(status != "Not significant") |> dplyr::count(status, ctx); a0 <- isl |> dplyr::count(ctx) |> dplyr::mutate(status = "All tested")
 isl_all <- dplyr::bind_rows(a1 |> dplyr::mutate(status = as.character(status)), a0) |> dplyr::group_by(status) |> dplyr::mutate(pct = 100 * n / sum(n)) |> dplyr::ungroup() |>
   dplyr::mutate(status = factor(status, levels = c("All tested", "Hypermethylated", "Hypomethylated")))
 write.csv(isl_all, "results/tables/TableS14_DMP_CpG_island_context.csv", row.names = FALSE)
 for (s in c("All tested", "Hypermethylated", "Hypomethylated")) log_num(paste0("dmp_island_pct_", gsub(" ", "_", s)), round(isl_all$pct[isl_all$status == s & isl_all$ctx == "Island"], 1))
-pB <- ggplot(isl_all, aes(status, pct, fill = ctx)) + geom_col(width = 0.7, colour = "black", linewidth = 0.2) +
-  scale_fill_manual(values = c(Island = "#1b7837", Shore = "#7fbf7b", Shelf = "#d9f0d3", `Open sea` = "#f7f7f7"), name = NULL) +
-  labs(x = NULL, y = "Probes (%)") + theme_classic(base_size = 9) + theme(axis.text.x = element_text(angle = 25, hjust = 1), legend.position = "bottom")
-fig9 <- pA + pB + plot_layout(widths = c(1.4, 1)) + plot_annotation(tag_levels = "A") & theme(plot.tag = element_text(face = "bold", size = 10))
-save_fig(fig9, "Fig9_methylation_TCGA_CESC", 7.2, 3.6)
+source("code/cells/c11b_fig9_labelled_volcano.R")
