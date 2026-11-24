@@ -1,0 +1,23 @@
+"annotation","cluster","level","n"
+"histology","Cluster A","Squamous",56
+"histology","Cluster B","Squamous",190
+"histology","Cluster A","Adenocarcinoma",16
+"histology","Cluster B","Adenocarcinoma",34
+"histology","Cluster A","Adenosquamous",2
+"histology","Cluster B","Adenosquamous",1
+"FIGO","Cluster A","I",43
+"FIGO","Cluster B","I",92
+"FIGO","Cluster A","II",13
+"FIGO","Cluster B","II",48
+"FIGO","Cluster A","III",8
+"FIGO","Cluster B","III",33
+"FIGO","Cluster A","IV",4
+"FIGO","Cluster B","IV",9
+"HPV","Cluster A","HPV16",23
+"HPV","Cluster B","HPV16",80
+"HPV","Cluster A","HPV18",10
+"HPV","Cluster B","HPV18",17
+"HPV","Cluster A","Other HPV types",12
+"HPV","Cluster B","Other HPV types",27
+"HPV","Cluster A","HPV-negative",8
+"HPV","Cluster B","HPV-negative",1

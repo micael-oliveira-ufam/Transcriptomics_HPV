@@ -1,0 +1,19 @@
+"variable","level","n","value"
+"Primary tumours","n",304,NA
+"Age (years)","mean (range)",NA,"48.2 (20-88)"
+"Histology","Squamous",246,NA
+"Histology","Adenocarcinoma",50,NA
+"Histology","Adenosquamous",3,NA
+"Histology","missing",5,NA
+"FIGO stage","I",135,NA
+"FIGO stage","II",61,NA
+"FIGO stage","III",41,NA
+"FIGO stage","IV",13,NA
+"FIGO stage","missing",54,NA
+"HPV genotype","HPV16",103,NA
+"HPV genotype","HPV18",27,NA
+"HPV genotype","Other HPV types",39,NA
+"HPV genotype","HPV-negative",9,NA
+"HPV genotype","missing",126,NA
+"Vital status","Alive",232,NA
+"Vital status","Dead",72,NA

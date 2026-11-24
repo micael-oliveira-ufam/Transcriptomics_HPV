@@ -1,0 +1,65 @@
+Sample-characteristic fields available in the GSE63514 series matrix:
+ [1] "source_name_ch1"        "organism_ch1"           "characteristics_ch1"   
+ [4] "treatment_protocol_ch1" "growth_protocol_ch1"    "molecule_ch1"          
+ [7] "extract_protocol_ch1"   "label_ch1"              "label_protocol_ch1"    
+[10] "taxid_ch1"              "dissection:ch1"         "tissue type:ch1"       
+[13] "treatment:ch1"         
+     gene probe_highest_mean probe_highest_variance anova_p_mean
+1   MKI67        212022_s_at            212021_s_at     8.47e-12
+2   TOP2A          201292_at            201291_s_at     1.21e-09
+3    MCM2        202107_s_at            202107_s_at     4.95e-13
+4    PCNA          201202_at              201202_at     7.90e-10
+5  CDKN2A          207039_at              207039_at     4.50e-14
+6   CCND1          208712_at              208712_at     1.01e-07
+7    TP53          201746_at              201746_at     3.17e-01
+8     RB1          203132_at              203132_at     1.83e-04
+9  PIK3CA          204369_at              204369_at     2.23e-04
+10   PTEN          225363_at            242622_x_at     1.38e-02
+11   EGFR          224999_at             1565483_at     7.23e-01
+12  ERBB2        216836_s_at            216836_s_at     5.87e-02
+13    MYC        202431_s_at            202431_s_at     3.61e-01
+14  KRT10        213287_s_at            207023_x_at     8.66e-05
+15  KRT14          209351_at              209351_at     5.36e-02
+16  HIF1A          200989_at              200989_at     1.44e-02
+17  VEGFA        210512_s_at            211527_x_at     1.40e-03
+18  CD274          227458_at              227458_at     5.13e-05
+   anova_p_variance tukey_Cancer_vs_Normal_mean tukey_Cancer_vs_Normal_variance
+1          1.06e-12                    1.64e-07                        4.15e-09
+2          1.79e-06                    1.27e-08                        1.32e-05
+3          4.95e-13                    5.46e-10                        5.46e-10
+4          7.90e-10                    1.10e-07                        1.10e-07
+5          4.50e-14                    3.78e-11                        3.78e-11
+6          1.01e-07                    2.36e-05                        2.36e-05
+7          3.17e-01                    6.13e-01                        6.13e-01
+8          1.83e-04                    1.01e-02                        1.01e-02
+9          2.23e-04                    3.88e-04                        3.88e-04
+10         3.11e-01                    4.23e-01                        9.92e-01
+11         2.67e-01                    1.00e+00                        9.10e-01
+12         5.87e-02                    5.68e-02                        5.68e-02
+13         3.61e-01                    3.55e-01                        3.55e-01
+14         8.66e-05                    4.09e-03                        4.61e-03
+15         5.36e-02                    5.53e-01                        5.53e-01
+16         1.44e-02                    5.05e-02                        5.05e-02
+17         1.34e-06                    3.23e-03                        1.24e-05
+18         5.13e-05                    5.31e-05                        5.31e-05
+   bonf_sig_mean bonf_sig_variance
+1           TRUE              TRUE
+2           TRUE              TRUE
+3           TRUE              TRUE
+4           TRUE              TRUE
+5           TRUE              TRUE
+6           TRUE              TRUE
+7          FALSE             FALSE
+8           TRUE              TRUE
+9           TRUE              TRUE
+10         FALSE             FALSE
+11         FALSE             FALSE
+12         FALSE             FALSE
+13         FALSE             FALSE
+14          TRUE              TRUE
+15         FALSE             FALSE
+16         FALSE             FALSE
+17          TRUE              TRUE
+18          TRUE              TRUE
+
+DONE_OK

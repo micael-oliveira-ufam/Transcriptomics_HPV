@@ -1,0 +1,92 @@
+          variable           level   n        value
+1  Primary tumours               n 304         <NA>
+2      Age (years)    mean (range)  NA 48.2 (20-88)
+3        Histology        Squamous 246         <NA>
+4        Histology  Adenocarcinoma  50         <NA>
+5        Histology   Adenosquamous   3         <NA>
+6        Histology         missing   5         <NA>
+7       FIGO stage               I 135         <NA>
+8       FIGO stage              II  61         <NA>
+9       FIGO stage             III  41         <NA>
+10      FIGO stage              IV  13         <NA>
+11      FIGO stage         missing  54         <NA>
+12    HPV genotype           HPV16 103         <NA>
+13    HPV genotype           HPV18  27         <NA>
+14    HPV genotype Other HPV types  39         <NA>
+15    HPV genotype    HPV-negative   9         <NA>
+16    HPV genotype         missing 126         <NA>
+17    Vital status           Alive 232         <NA>
+18    Vital status            Dead  72         <NA>
+
+Cluster vs annotation:
+$histology
+           
+            Squamous Adenocarcinoma Adenosquamous
+  Cluster A       56             16             2
+  Cluster B      190             34             1
+
+$FIGO
+           
+             I II III IV
+  Cluster A 43 13   8  4
+  Cluster B 92 48  33  9
+
+$HPV
+           
+            HPV16 HPV18 Other HPV types HPV-negative
+  Cluster A    23    10              12            8
+  Cluster B    80    17              27            1
+
+p: 0.06787932 0.2790472 0.0005099949 
+     gene   n     KW_p  KW_q_BH    factor
+1  CDKN2A 178 1.92e-06 3.45e-05       HPV
+2    EGFR 178 1.09e-05 9.83e-05       HPV
+3    TP53 178 2.72e-04 1.63e-03       HPV
+4   CCND1 178 7.04e-04 2.15e-03       HPV
+5   CD274 178 5.41e-04 2.15e-03       HPV
+6   KRT14 178 7.17e-04 2.15e-03       HPV
+7    PCNA 178 1.31e-02 3.38e-02       HPV
+8    MCM2 178 1.72e-02 3.86e-02       HPV
+9   KRT14 299 6.83e-19 1.23e-17 Histology
+10   EGFR 299 1.10e-15 9.88e-15 Histology
+11  CD274 299 3.24e-12 1.95e-11 Histology
+12  ERBB2 299 1.37e-11 6.16e-11 Histology
+13    MYC 299 1.41e-07 5.07e-07 Histology
+14  KRT10 299 5.38e-06 1.61e-05 Histology
+15   TP53 299 1.24e-02 3.20e-02 Histology
+     gene    HR    lo    hi        p    q_BH
+21  FOXP3 0.655 0.515 0.832 0.000529 0.00643
+17  VEGFA 1.556 1.210 2.003 0.000585 0.00643
+22   CD8A 0.707 0.559 0.894 0.003781 0.02773
+20  CTLA4 0.740 0.591 0.926 0.008480 0.04664
+19  PDCD1 0.739 0.583 0.936 0.012160 0.05351
+11   EGFR 1.332 1.042 1.703 0.021902 0.06971
+16  HIF1A 1.342 1.043 1.726 0.022181 0.06971
+4    PCNA 0.773 0.608 0.984 0.036438 0.10020
+7    TP53 0.813 0.651 1.016 0.068809 0.16820
+13    MYC 1.208 0.949 1.539 0.125133 0.27529
+6   CCND1 1.169 0.925 1.479 0.191326 0.38265
+18  CD274 0.876 0.697 1.100 0.253696 0.46511
+12  ERBB2 1.144 0.894 1.464 0.286327 0.48455
+8     RB1 1.138 0.886 1.462 0.309889 0.48697
+10   PTEN 1.107 0.885 1.385 0.372193 0.54588
+9  PIK3CA 1.101 0.879 1.379 0.402017 0.55277
+14  KRT10 0.908 0.711 1.160 0.439726 0.56906
+15  KRT14 1.053 0.833 1.331 0.665064 0.74154
+1   MKI67 1.052 0.834 1.326 0.669683 0.74154
+2   TOP2A 1.049 0.832 1.321 0.687106 0.74154
+5  CDKN2A 0.960 0.774 1.190 0.707837 0.74154
+3    MCM2 1.036 0.818 1.311 0.770322 0.77032
+                   term    HR    lo   hi      p
+CD274             CD274 0.944 0.708 1.26 0.6956
+age                 age 1.019 0.997 1.04 0.0890
+stageIII-IV stageIII-IV 2.166 1.176 3.99 0.0131
+histNon-SCC histNon-SCC 0.935 0.393 2.22 0.8797
+       chisq df    p
+CD274  1.483  1 0.22
+age    0.622  1 0.43
+stage  0.744  1 0.39
+hist   0.461  1 0.50
+GLOBAL 3.883  4 0.42
+
+DONE_OK

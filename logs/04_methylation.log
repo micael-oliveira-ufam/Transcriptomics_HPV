@@ -1,0 +1,50 @@
+GDC HM450 files: 312 
+
+    486427     384095     375027     316546 
+
+Hypermethylated  Hypomethylated Not significant 
+          21673           27065          267808 
+                probe
+cg03735308 cg03735308
+cg13435326 cg13435326
+cg24523591 cg24523591
+cg01298514 cg01298514
+cg15227682 cg15227682
+cg07149785 cg07149785
+cg18022921 cg18022921
+cg00539360 cg00539360
+cg07760161 cg07760161
+cg07781399 cg07781399
+cg26399164 cg26399164
+cg11190277 cg11190277
+cg12413918 cg12413918
+                                                                                                      gene
+cg03735308                                                                                           CCND1
+cg13435326                                                                                          PIK3CA
+cg24523591                                                                                          PIK3CA
+cg01298514 VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA
+cg15227682                                                                                     ERBB2;PGAP3
+cg07149785                                                                                           CCND1
+cg18022921 VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA
+cg00539360 VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA;VEGFA
+cg07760161                                                                      TP53;WRAP53;TP53;TP53;TP53
+cg07781399                                                                                           CCND1
+cg26399164                                                                                           CCND1
+cg11190277                                                                                           CCND1
+cg12413918                                                                                     ERBB2;ERBB2
+           logFC delta_beta adj.P.Val          status
+cg03735308 -2.36    -0.0889  4.34e-06  Hypomethylated
+cg13435326  3.91     0.5680  4.39e-06 Hypermethylated
+cg24523591  2.94     0.4107  4.96e-05 Hypermethylated
+cg01298514  2.82     0.4319  6.60e-05 Hypermethylated
+cg15227682 -3.05    -0.4095  8.01e-05  Hypomethylated
+cg07149785 -1.82    -0.0992  2.72e-04  Hypomethylated
+cg18022921  2.13     0.3665  4.00e-04 Hypermethylated
+cg00539360  2.16     0.3596  4.69e-04 Hypermethylated
+cg07760161 -2.55    -0.3435  2.35e-03  Hypomethylated
+cg07781399 -1.57    -0.1276  6.10e-03  Hypomethylated
+cg26399164 -1.42    -0.1245  2.63e-02  Hypomethylated
+cg11190277 -1.33    -0.0926  2.66e-02  Hypomethylated
+cg12413918 -1.47    -0.1248  3.46e-02  Hypomethylated
+
+DONE_OK

@@ -1,0 +1,6 @@
+data/
+*.rds
+.Rhistory
+.RData
+.Rproj.user/
+*.tiff
